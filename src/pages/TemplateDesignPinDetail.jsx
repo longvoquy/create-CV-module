@@ -81,9 +81,22 @@ const TemplateDesignPinDetail = () => {
           </div>
 
           {/* edit the template option  */}
-          <Link to={`/resume/${data?.name}?templateId=${templateID}`} className='w-full px-4 py-3 rounded-md flex items-center justify-center bg-emerald-500 cursor-pointer'>
+          <Link
+            className='w-full px-4 py-3 rounded-md flex items-center justify-center bg-emerald-500 cursor-pointer'
+            to={`/resume/${data?.name}?templateId=${templateID}`} >
             <p className='text-white font-semibold text-lg'> Edit this template </p>
           </Link>
+
+          {/* {data?.map(template => (
+            <Link
+              key={template.id} // Assuming 'id' is the unique identifier
+              to={`/resume/${data?.name}?templateId=${templateID}`}
+              className='w-full px-4 py-3 rounded-md flex items-center justify-center bg-emerald-500 cursor-pointer'
+            >
+              <p className='text-white font-semibold text-lg'> Edit this template </p>
+            </Link>
+          ))} */}
+
 
           {/* tags */}
           <div className='w-full flex items-center justify-start flex-warp gap-2'>

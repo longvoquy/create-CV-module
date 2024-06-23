@@ -30,7 +30,7 @@ const TemplateDesignPin = ({ data, index }) => {
             >
                 <img
                     src={data?.imageURL}
-                    classNam='w-full h-full object-cover'
+                    className='w-full h-full object-cover'
                     alt=''
                 />
                 <AnimatePresence>

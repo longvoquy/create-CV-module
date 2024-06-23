@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import MainSpinner from "../MainSpinner";
 import { useQuery } from "react-query";
-import useUser from "../../hooks/useUser";
+import useUser from "../../hook/useUser";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
@@ -485,6 +485,9 @@ const Template1 = () => {
                                                         type="text"
                                                         readOnly="true"
                                                         name="major"
+
+
+                                                        
                                                         value={edu.major}
                                                         onChange={(e) => handleEducationChange(i, e)}
                                                         className={`bg-transparent outline-none border-none text-sm font-semibold uppercase  text-gray-100  ${isEdit && "text-yellow-400 w-full"

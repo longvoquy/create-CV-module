@@ -7,7 +7,7 @@ import { ReactQueryDevtools } from "react-query/devtools"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 //home
-import { HomeScreen } from "../pages"
+import { HomeScreen, Authenticaion } from "../pages"
 
 const App = () => {
   const queryClient = new QueryClient()
@@ -16,6 +16,7 @@ const App = () => {
       <Suspense fallback={<div>Loading..</div>}>
         <Routes>
           <Route path="/*" element={<HomeScreen />} />
+          <Route path="/auth" element={<Authenticaion />} />
         </Routes>
       </Suspense>
       <ToastContainer position="top-right" theme="dark" />
